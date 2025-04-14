@@ -39,6 +39,8 @@ def extension_login():
         chrome_options.add_extension('NetEaseMusicWorldPlus.crx')
         logging.info("Extension added successfully!")
         browser.save_screenshot("extension_frame.png")
+    except Exception as e:
+        logging.error(f"Failed to added extension NetEaseMusicWorldPlus"
 
     logging.info("Initializing Chrome WebDriver")
     try:

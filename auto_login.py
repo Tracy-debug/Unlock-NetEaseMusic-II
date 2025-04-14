@@ -40,7 +40,7 @@ def extension_login():
         logging.info("Extension added successfully!")
         browser.save_screenshot("extension_frame.png")
     except Exception as e:
-        logging.error(f"Failed to added extension NetEaseMusicWorldPlus"
+        logging.error(f"Failed to added extension NetEaseMusicWorldPlus")
 
     logging.info("Initializing Chrome WebDriver")
     try:

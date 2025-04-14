@@ -3,7 +3,6 @@
 import os
 import time
 import logging
-import base64
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
@@ -47,10 +46,6 @@ def extension_login():
     try:
         service = Service(ChromeDriverManager().install())  # Auto-download correct chromedriver
         browser = webdriver.Chrome(service=service, options=chrome_options)
-        browser.save_screenshot("extension_frame.png")
-        with open("extension_frame.png", "rb") as image_file:
-            encoded = base64.b64encode(image_file.read()).decode('utf-8')
-            logging.info(f"::notice title=Screenshot::data:image/png;base64, {encoded}")
     except Exception as e:
         logging.error(f"Failed to initialize ChromeDriver: {e}")
         return

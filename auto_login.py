@@ -34,12 +34,12 @@ def enter_iframe(browser):
 def extension_login():
     chrome_options = webdriver.ChromeOptions()
 
-    logging.info("Load Chrome extension NetEaseMusicWorldPlus")
+    logging.info("Load Chrome extension NetEaseMusicWorld++")
     try:
-        chrome_options.add_extension('NetEaseMusicWorldPlus.crx')
+        chrome_options.add_extension('NetEaseMusicWorld++.crx')
         logging.info("Extension added successfully!")
     except Exception as e:
-        logging.error(f"Failed to added extension NetEaseMusicWorldPlus")
+        logging.error(f"Failed to added extension NetEaseMusicWorld++")
         logging.error(e)
 
     logging.info("Initializing Chrome WebDriver")

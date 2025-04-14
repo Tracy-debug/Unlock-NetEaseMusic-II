@@ -40,13 +40,13 @@ def extension_login():
         chrome_options.add_extension('NetEaseMusicWorldPlus.crx')
         logging.info("Extension added successfully!")
         browser.save_screenshot("extension_frame.png")
-        with open("extension_frame.png", "rb") as image_file：
+        with open("extension_frame.png", "rb") as image_file:
             encoded = base64.b64encode(image_file.read()).decode('utf-8')
             logging.info(f"::notice title=Screenshot::data:image/png;base64, {encoded}")
     except Exception as e:
         logging.error(f"Failed to added extension NetEaseMusicWorldPlus")
         logging.error(e)
-        with open("extension_frame.png", "rb") as image_file：
+        with open("extension_frame.png", "rb") as image_file:
             encoded = base64.b64encode(image_file.read()).decode('utf-8')
             logging.info(f"::notice title=Screenshot::data:image/png;base64, {encoded}")
         return
